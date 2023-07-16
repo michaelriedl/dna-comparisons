@@ -21,6 +21,21 @@ The Hamming distance is a simple and widely used measure to quantify the dissimi
 
 ### Free Divergence
 
+From Hawkins et al. [[1]](#1):
+
+```
+After DNA synthesis and sequencing, a barcode of length n can be altered, and is not guaranteed to end after exactly n bases. To begin, we define a filled/truncated right-end m-edit, hereafter written “FRE m-edit,” of a DNA sequence of length n to be the result of any m-edits [substitutions (sub), insertions (ins), or deletions (del)], followed by truncating or filling with any random bases on the right (as from the unknown downstream read) as necessary to return to original length n (Fig. 1B). For any two DNA sequences X and Y of the same length, we define the FREE divergence between X and Y, written FreeDiv(X, Y), to be the minimum m such that Y is a FRE m-edit of X.
+```
+
+<div align="center">
+<figure>
+<img src="./figures/freediv.png" alt="Free Divergence" style="width:50%">
+<figcaption>Figure 1B from Hawkins et al. illustrating the difference between various comparisons.</figcaption>
+</figure>
+</div>
+
+It is important to note that the major difference between the Hamming distance and Free Divergence is that the latter accounts for insertions and deletions.
+
 ## Getting Started
 
 
@@ -35,3 +50,7 @@ BARCODE_LENGTH = 5
 # Create all possible barcode of given length
 all_barcodes = ["".join(x) for x in itertools.product("ATCG", repeat=BARCODE_LENGTH)]
 ```
+
+## References
+<a id="1">[1]</a> 
+Hawkins, John A., et al. "Indel-correcting DNA barcodes for high-throughput sequencing." Proceedings of the National Academy of Sciences 115.27 (2018): E6217-E6226.
