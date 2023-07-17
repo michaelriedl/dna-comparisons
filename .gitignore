@@ -1,6 +1,10 @@
 # Custom for repository
 dev/
 
+# Package build
+build/
+*.egg-info/
+
 # Byte-compiled / optimized / DLL files
 *__pycache__/
 *.py[cod]

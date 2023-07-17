@@ -37,8 +37,28 @@ It is important to note that the major difference between the Hamming distance a
 
 ## Getting Started
 
+### Install
+The first thing to do is install the package. It is recommended to install it in a virtual environment. The example below shows a setup using conda.
 
-## Examples
+```bash
+conda create --name dnacomp-env python=3.9
+conda activate dnacomp-env
+git clone https://github.com/michaelriedl/dna-comparisons.git
+cd dna-comparisons
+pip install .
+```
+
+You can then import the various functions as follows:
+
+```python
+from dnacomp import (hamming_distance, hamming_distance_parallel,
+                     free_divergence, free_divergence_parallel,
+                     parallel_comparison)
+```
+
+See the subsection below for example use cases.
+
+### Examples
 
 ```python
 import itertools
