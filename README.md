@@ -27,7 +27,7 @@ From Hawkins et al. [[1]](#1):
 > After DNA synthesis and sequencing, a barcode of length n can be altered, and is not guaranteed to end after exactly n bases. To begin, we define a filled/truncated right-end m-edit, hereafter written “FRE m-edit,” of a DNA sequence of length n to be the result of any m-edits [substitutions (sub), insertions (ins), or deletions (del)], followed by truncating or filling with any random bases on the right (as from the unknown downstream read) as necessary to return to original length n (Fig. 1B). For any two DNA sequences X and Y of the same length, we define the FREE divergence between X and Y, written FreeDiv(X, Y), to be the minimum m such that Y is a FRE m-edit of X.
 
 <p align="center">
-<img src="./figures/freediv.png" alt="Free Divergence" style="width:50%">
+<img src="./figures/freediv.png" alt="Free Divergence" style="width:80%">
 </p>
 <p align="center">
 Figure 1B from Hawkins et al. illustrating the difference between various comparisons.
