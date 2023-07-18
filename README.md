@@ -60,6 +60,25 @@ See the subsection below for example use cases.
 
 ### Examples
 
+The examples from the figure above are recreated in code in *examples/FreeDiv-Paper-Examples.ipynb* and one of the examples is shown below.
+
+```python
+## Substitution error
+seq1 = "GATTACA"
+seq2 = "GCTTACA"
+
+print("Substitution error example")
+print("Hamming distance: ", hamming_distance(seq1, seq2))
+print("Free divergence: ", free_divergence(seq1, seq2))
+```
+This code creates the following output, matching the results from the figure above.
+```bash
+Substitution error example
+Hamming distance:  1.0
+Free divergence:  1.0
+```
+
+You can also use these comparisons to create DNA barcodes that meet a certain design criterion to reduce noise in sequencing.
 ```python
 import itertools
 
